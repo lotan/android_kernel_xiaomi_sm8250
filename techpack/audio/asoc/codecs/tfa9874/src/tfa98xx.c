@@ -3191,6 +3191,7 @@ static int tfa98xx_mute(struct snd_soc_dai *dai, int mute, int stream)
 		}
 #else
 		tfa98xx_send_mute_cmd(TFA_KCONTROL_VALUE_ENABLED);
+#endif
 		msleep(60);
 #endif
 		tfa_dev_stop(tfa98xx->tfa);
@@ -3222,6 +3223,7 @@ static int tfa98xx_mute(struct snd_soc_dai *dai, int mute, int stream)
 			}
 else
 			tfa98xx_adsp_send_calib_values();
+#endif
 #endif
 		} else {
 			tfa98xx->cstream = 1;
